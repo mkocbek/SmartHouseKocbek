@@ -1,0 +1,191 @@
+- id: '1578342611519'
+  alias: 'Notify on event and alarm is on '
+  description: ''
+  trigger:
+  - entity_id: light.dnevna_soba_luc
+    for: '1'
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: light.klubska_soba_luc
+    for: '1'
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.alexa_flex_motion_sensor_1
+    for: '1'
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition:
+  - condition: state
+    entity_id: switch.alarm_switch
+    state: 'on'
+  - condition: state
+    entity_id: switch.alarm_critical
+    state: 'off'
+  action:
+  - data:
+      message: Nekdo je doma.
+      title: Alarm
+    service: notify.mobile_app_pocophone_f1
+  - data:
+      message: Nekdo je doma
+      title: Alarm
+    service: notify.mobile_app_sm_g950f
+  - alias: ''
+    data: {}
+    entity_id: switch.alarm_critical
+    service: switch.turn_on
+- id: '1578399900286'
+  alias: 'Snapshot on motion #1'
+  description: ''
+  trigger:
+  - entity_id: camera.spredaj2
+    for: '1'
+    from: streaming
+    platform: state
+    to: recording
+  condition:
+  - condition: state
+    entity_id: switch.alarm_switch
+    state: 'on'
+  action:
+  - data:
+      filename: /tmp/snapshot_spredaj_1.jpg
+    entity_id: camera.spredaj2
+    service: camera.snapshot
+  - data:
+      data:
+        images:
+        - /tmp/snapshot_spredaj_1.jpg
+      message: Snapshot spredaj
+      title: Snapshot spredaj
+    service: notify.smtp_alarm_milos
+- id: '1578407118501'
+  alias: Turn on alarm when i am not at home
+  description: ''
+  trigger:
+  - entity_id: device_tracker.sm_g950f
+    event: leave
+    platform: zone
+    zone: zone.home
+  condition: []
+  action:
+  - alias: ''
+    data: {}
+    entity_id: switch.alarm_switch
+    service: switch.turn_on
+- id: '1578737785528'
+  alias: Turn on water circulation while someone is at home.
+  description: ''
+  trigger:
+  - minutes: /15
+    platform: time_pattern
+  condition:
+  - condition: zone
+    entity_id: person.milos_kocbek
+    zone: zone.home
+  - after: 06:00:00
+    before: '22:00:00'
+    condition: time
+  action:
+  - alias: ''
+    data: {}
+    entity_id: light.kurilnica_cirkulacija
+    service: light.turn_on
+- id: '1578778435926'
+  alias: Turn on hot water after hours on movement
+  description: ''
+  trigger:
+  - entity_id: switch.alexa_flex_motion_sensor_1
+    for: '1'
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition:
+  - after: '22:00:00'
+    before: 06:00:00
+    condition: time
+  - condition: zone
+    entity_id: person.milos_kocbek
+    zone: zone.home
+  - condition: template
+    value_template: '{{(as_timestamp(now())-as_timestamp(states.light.kurilnica_cirkulacija.last_updated))
+      > 900 }}'
+  action:
+  - alias: ''
+    data: {}
+    entity_id: light.kurilnica_cirkulacija
+    service: light.turn_on
+- id: '1578779088865'
+  alias: Turn on hot water on wc, batroom or kitchen light
+  description: ''
+  trigger:
+  - entity_id: light.kopalnica1_luc
+    for: '1'
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: light.wc_luc
+    for: '1'
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: light.kuhinja_luc
+    for: '1'
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition:
+  - condition: template
+    value_template: '{{(as_timestamp(now())-as_timestamp(light.kurilnica_cirkulacija.last_updated))
+      > 900 }}'
+  action:
+  - entity_id: light.kurilnica_cirkulacija
+    service: light.turn_on
+- id: '1579023972623'
+  alias: Akcije ob odhodu od doma
+  description: ''
+  trigger:
+  - entity_id: person.milos_kocbek
+    event: leave
+    platform: zone
+    zone: zone.home
+  - entity_id: person.suzana_susnik_kocbel
+    event: leave
+    platform: zone
+    zone: zone.home
+  condition:
+  - condition: zone
+    entity_id: person.milos_kocbek
+    zone: zone.home
+  - condition: zone
+    entity_id: person.suzana_susnik_kocbel
+    zone: zone.home
+  action:
+  - entity_id: switch.luci_ugasni_vse_luci_v_pritlicju
+    service: switch.turn_on
+  - entity_id: switch.luci_ugasni_vse_luci_v_nadstropju
+    service: switch.turn_on
+  - entity_id: switch.luci_ugasni_vse_luci_v_kleti
+    service: switch.turn_on
+  - data:
+      position: 0
+    entity_id: cover.jedilnica_terasa_roleta
+    service: cover.set_cover_position
+  - entity_id: switch.alarm_switch
+    service: switch.turn_on
+- id: '1579031765503'
+  alias: Turn off sensor after 1 min
+  description: ''
+  trigger:
+  - entity_id: switch.alexa_flex_motion_sensor_1
+    for: '60'
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - entity_id: switch.alexa_flex_motion_sensor_1
+    service: switch.turn_off

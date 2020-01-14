@@ -1,0 +1,76 @@
+Klet:
+  name: Klet
+  entities:
+    - light.klubska_soba_luc
+    - light.klet_hodnik_luc
+    - light.drvarnica_luc
+    - light.kurilnica_luc
+    - light.kurilnica_cirkulacija
+    - light.zunaj_luc
+    - light.pod_stopnicami_luc
+
+
+PritlicjeLuci:
+  name: Pritlicje Lights
+  entities:
+    - light.dnevna_soba_luc
+    - light.dnevna_soba_omara_luc
+    - light.jedilnica_luc
+    - light.kuhinja_luc
+    - light.kuhinja_sank_luc
+    - light.kuhinja_luc_led
+    - light.zunaj_zunaj_luc
+    - light.zunaj_vhod_luc
+    - light.zunaj_nadstresek_luc
+    - light.zunaj_nadstresek_zadaj_luc
+    - light.spalnica_luc
+    - light.spalnica_omara_luc
+    - light.spalnica_hodnik_luc
+    - light.kopalnica_luc
+    - light.wc_luc
+    - light.hodnik_luc
+    - light.stopnice_luc
+    - light.stopnice_luc_led
+
+PritlicjeCover:
+  name: Pritlicje Covers
+  entities:
+    - cover.dnevna_soba_roleta_1
+    - cover.dnevna_soba_roleta_2
+    - cover.dnevna_soba_roleta_3
+    - cover.jedilnica_roleta
+    - cover.jedilnica_terasa_roleta
+    - cover.kuhinja_roleta_levo
+    - cover.kuhinja_roleta_desno
+    - cover.spalnica_roleta_levo
+    - cover.spalnica_roleta_desno
+    - cover.kopalnica_roleta
+    - cover.wc_roleta
+    - cover.hodnik_roleta
+
+MansardaLights:
+  name: Mansarda Lights
+  entities:
+    - light.dnevna_dnevna_luc
+    - light.dnevna_sredina_luc
+    - light.dnevna_stopnice_luc
+    - light.kopalnica1_luc
+    - light.kopalnica1_ogledalo_luc
+    - light.kopalnica1_ventilator
+    - light.kopalnica1_hodnik
+    - light.balkon_spredaj_luc
+    - light.balkon_zadaj_luc
+    - light.soba_matic_luc
+    - light.spalnica_nadstropje_luc
+    - light.soba_anze_luc
+    - light.stopnice1_luc
+
+MansardaCovers:
+  name: Mansarda Covers
+  entities:
+    - cover.kopalnica1_roleta
+    - cover.balkon_spredaj_roleta
+    - cover.balkon_zadaj_roleta
+    - cover.soba_matic_roleta
+    - cover.spalnica_nadstropje_roleta
+    - cover.soba_anze_roleta

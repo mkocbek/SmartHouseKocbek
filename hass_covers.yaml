@@ -1,0 +1,127 @@
+- platform: mqtt
+  unique_id: "dnevna_soba_roleta_1"
+  name: "Dnevna soba Roleta 1"
+  position_topic: "s7plc/house/memory_int/MW52"
+  set_position_topic: "s7plc/house/input_cover/S7_Dnevna1Roleta"
+  set_position_template: '{{ (((states.cover.dnevna_soba_roleta_1.attributes.current_position - position)/100) * 16) }}'
+
+- platform: mqtt
+  unique_id: "dnevna_soba_roleta_2"
+  name: "Dnevna soba Roleta 2"
+  position_topic: "s7plc/house/memory_int/MW54"
+  set_position_topic: "s7plc/house/input_cover/S7_Dnevna2Roleta"
+  set_position_template: '{{ (((states.cover.dnevna_soba_roleta_2.attributes.current_position - position)/100) * 16) }}'
+
+- platform: mqtt
+  unique_id: "dnevna_soba_roleta_3"
+  name: "Dnevna soba Roleta 3"
+  position_topic: "s7plc/house/memory_int/MW56"
+  set_position_topic: "s7plc/house/input_cover/S7_Dnevna3Roleta"
+  set_position_template: '{{ (((states.cover.dnevna_soba_roleta_3.attributes.current_position - position)/100) * 16) }}'
+
+- platform: mqtt
+  unique_id: "jedilnica_roleta"
+  name: "Jedilnica Roleta"
+  position_topic: "s7plc/house/memory_int/MW64"
+  set_position_topic: "s7plc/house/input_cover/S7_JedilnicaRoleta"
+  set_position_template: '{{ (((states.cover.jedilnica_roleta.attributes.current_position - position)/100) * 16) }}'
+
+- platform: mqtt
+  unique_id: "jedilnica_terasa_roleta"
+  name: "Jedilnica Terasa Roleta"
+  position_topic: "s7plc/house/memory_int/MW62"
+  set_position_topic: "s7plc/house/input_cover/S7_JedilnicaTerasaRoleta"
+  set_position_template: '{{ (((states.cover.jedilnica_terasa_roleta.attributes.current_position - position)/100) * 29) }}'
+
+- platform: mqtt
+  unique_id: "kuhinja_roleta_levo"
+  name: "Kuhinja Roleta levo"
+  position_topic: "s7plc/house/memory_int/MW58"
+  set_position_topic: "s7plc/house/input_cover/S7_KuhinjaLevoRoleta"
+  set_position_template: '{{ (((states.cover.kuhinja_roleta_levo.attributes.current_position - position)/100) * 16) }}'
+
+- platform: mqtt
+  unique_id: "kuhinja_roleta_desno"
+  name: "Kuhinja Roleta desno"
+  position_topic: "s7plc/house/memory_int/MW60"
+  set_position_topic: "s7plc/house/input_cover/S7_KuhinjaDesnoRoleta"
+  set_position_template: '{{ (((states.cover.kuhinja_roleta_desno.attributes.current_position - position)/100) * 16) }}'
+
+- platform: mqtt
+  unique_id: "spalnica_roleta_levo"
+  name: "Spalnica Roleta levo"
+  position_topic: "s7plc/house/memory_int/MW48"
+  set_position_topic: "s7plc/house/input_cover/S7_SpalnicaLevoRoleta"
+  set_position_template: '{{ (((states.cover.spalnica_roleta_levo.attributes.current_position - position)/100) * 16) }}'
+
+- platform: mqtt
+  unique_id: "spalnica_roleta_desno"
+  name: "Spalnica Roleta desno"
+  position_topic: "s7plc/house/memory_int/MW50"
+  set_position_topic: "s7plc/house/input_cover/S7_SpalnicaDesnoRoleta"
+  set_position_template: '{{ (((states.cover.spalnica_roleta_desno.attributes.current_position - position)/100) * 16) }}'
+
+- platform: mqtt
+  unique_id: "kopalnica_roleta"
+  name: "Kopalnica Roleta"
+  position_topic: "s7plc/house/memory_int/MW68"
+  set_position_topic: "s7plc/house/input_cover/S7_KopalnicaRoleta"
+  set_position_template: '{{ (((states.cover.kopalnica_roleta.attributes.current_position - position)/100) * 16) }}'
+
+- platform: mqtt
+  unique_id: "wc_roleta"
+  name: "WC Roleta"
+  position_topic: "s7plc/house/memory_int/MW70"
+  set_position_topic: "s7plc/house/input_cover/S7_WCRoleta"
+  set_position_template: '{{ (((states.cover.wc_roleta.attributes.current_position - position)/100) * 16) }}'
+
+- platform: mqtt
+  unique_id: "hodnik_roleta"
+  name: "Hodnik Roleta"
+  position_topic: "s7plc/house/memory_int/MW66"
+  set_position_topic: "s7plc/house/input_cover/S7_HodnikRoleta"
+  set_position_template: '{{ (((states.cover.hodnik_roleta.attributes.current_position - position)/100) * 16) }}'
+
+- platform: mqtt
+  unique_id: "kopalnica1_roleta"
+  name: "Kopalnica1 Roleta"
+  position_topic: "s7plc/house/memory_int/MW42"
+  set_position_topic: "s7plc/house/input_cover/S7_KopalnicaNadRoleta"
+  set_position_template: '{{ (((states.cover.kopalnica1_roleta.attributes.current_position - position)/100) * 16) }}'
+
+- platform: mqtt
+  unique_id: "balkon_spredaj_roleta"
+  name: "Balkon spredaj Roleta"
+  position_topic: "s7plc/house/memory_int/MW44"
+  set_position_topic: "s7plc/house/input_cover/S7_BalkonSpredajRoleta"
+  set_position_template: '{{ (((states.cover.balkon_spredaj_roleta.attributes.current_position - position)/100) * 29) }}'
+
+- platform: mqtt
+  unique_id: "balkon_zadaj_roleta"
+  name: "Balkon zadaj Roleta"
+  position_topic: "s7plc/house/memory_int/MW44"
+  set_position_topic: "s7plc/house/input_cover/S7_BalkonZadajRoleta"
+  set_position_template: '{{ (((states.cover.balkon_zadaj_roleta.attributes.current_position - position)/100) * 29) }}'
+
+- platform: mqtt
+  unique_id: "soba_matic_roleta"
+  name: "Soba Matic Roleta"
+  position_topic: "s7plc/house/memory_int/MW36"
+  set_position_topic: "s7plc/house/input_cover/S7_SobaMaticRoleta"
+  set_position_template: '{{ (((states.cover.soba_matic_roleta.attributes.current_position - position)/100) * 16) }}'
+
+- platform: mqtt
+  unique_id: "spalnica_nadstropje_roleta"
+  name: "Spalnica Nadstropje Roleta"
+  position_topic: "s7plc/house/memory_int/MW40"
+  set_position_topic: "s7plc/house/input_cover/S7_SpalnicaNadRoleta"
+  set_position_template: '{{ (((states.cover.spalnica_nadstropje_roleta.attributes.current_position - position)/100) * 16) }}'
+
+- platform: mqtt
+  unique_id: "soba_anze_roleta"
+  name: "Soba Anze Roleta"
+  position_topic: "s7plc/house/memory_int/MW38"
+  set_position_topic: "s7plc/house/input_cover/S7_SobaAnzeRoleta"
+  set_position_template: '{{ (((states.cover.soba_anze_roleta.attributes.current_position - position)/100) * 16) }}'
+
+

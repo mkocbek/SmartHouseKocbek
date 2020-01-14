@@ -1,0 +1,165 @@
+- platform: mqtt
+  unique_id: "TVPower"
+  name: "IR Naprave TV power"
+  state_topic: "s7plc/house/temp_output/IR_TVPower"
+  command_topic: "s7plc/house/input/IR_TVPower"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "TVSource"
+  name: "IR Naprave TV source"
+  state_topic: "s7plc/house/temp_output/IR_TVSource"
+  command_topic: "s7plc/house/input/IR_TVSource"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "SiolPower"
+  name: "IR Naprave Siol power"
+  state_topic: "s7plc/house/temp_output/IR_SIOLPower"
+  command_topic: "s7plc/house/input/IR_SIOLPower"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "SoundBarOptical"
+  name: "IR Naprave Sound bar optical"
+  state_topic: "s7plc/house/temp_output/IR_SBOptical"
+  command_topic: "s7plc/house/input/IR_SBOptical"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "SoundBarBluetooth"
+  name: "IR Naprave Sound bar bluetooth"
+  state_topic: "s7plc/house/temp_output/IR_SBBluetooth"
+  command_topic: "s7plc/house/input/IR_SBBluetooth"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "SoundBarOff"
+  name: "IR Naprave Sound bar off"
+  state_topic: "s7plc/house/temp_output/IR_SBPower"
+  command_topic: "s7plc/house/input/IR_SBPower"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "VseLuciUgasni"
+  name: "Luci Ugasni vse luči"
+  state_topic: "s7plc/house/temp_output/S7_VseLuciUgasniWeb"
+  command_topic: "s7plc/house/input/S7_VseLuciUgasniWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "KletLuciUgasni"
+  name: "Luci Ugasni vse luči v kleti"
+  state_topic: "s7plc/house/temp_output/S7_KletLuciUgasniWeb"
+  command_topic: "s7plc/house/input/S7_KletLuciUgasniWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "PritlicjeLuciUgasni"
+  name: "Luci Ugasni vse luči v pritličju"
+  state_topic: "s7plc/house/temp_output/S7_PritlicjeLuciUgasniWeb"
+  command_topic: "s7plc/house/input/S7_PritlicjeLuciUgasniWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "NadstropjeLuciUgasni"
+  name: "Luci Ugasni vse luči v nadstropju"
+  state_topic: "s7plc/house/temp_output/S7_NadstropjeLuciUgasniWeb"
+  command_topic: "s7plc/house/input/S7_NadstropjeLuciUgasniWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "ReleVOmarici"
+  name: "Luci Ponovni zagon routerja"
+  state_topic: "s7plc/house/output/Q12.1"
+  command_topic: "s7plc/house/input/S7_ReleVKomOmariWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "VseRoleteGor"
+  name: "Rolete Vse rolete gor"
+  state_topic: "s7plc/house/temp_output/S7_VseRoleteGorWeb"
+  command_topic: "s7plc/house/input/S7_VseRoleteGorWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "VseRoleteDol"
+  name: "Rolete Vse rolete dol"
+  state_topic: "s7plc/house/temp_output/S7_VseRoleteDolWeb"
+  command_topic: "s7plc/house/input/S7_VseRoleteDolWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "PritlicjeRoleteGor"
+  name: "Rolete Pritličje rolete gor"
+  state_topic: "s7plc/house/temp_output/S7_PritlicjeRoleteGorWeb"
+  command_topic: "s7plc/house/input/S7_PritlicjeRoleteGorWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "PritlicjeRoleteDol"
+  name: "Rolete Pritličje rolete dol"
+  state_topic: "s7plc/house/temp_output/S7_PritlicjeRoleteDolWeb"
+  command_topic: "s7plc/house/input/S7_PritlicjeRoleteDolWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "NadstropjeRoleteGor"
+  name: "Rolete Nadstropje rolete gor"
+  state_topic: "s7plc/house/temp_output/S7_NadstropjeRoleteGorWeb"
+  command_topic: "s7plc/house/input/S7_NadstropjeRoleteGorWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "SonceRoletePreklopi"
+  name: "Rolete Sonce rolete"
+  state_topic: "s7plc/house/temp_output/S7_VseRoleteSonceWeb"
+  command_topic: "s7plc/house/input/S7_VseRoleteSonceWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  name: "Alarm Switch"
+  state_topic: "s7plc/house/alarmswitch"
+  command_topic: "s7plc/house/alarmswitch"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  name: "Alarm Critical"
+  state_topic: "s7plc/house/alarmcritical"
+  command_topic: "s7plc/house/alarmcritical"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  name: "Alexa Flex Motion Sensor 1"
+  state_topic: "s7plc/house/alexaflexmotionsensor1"
+  command_topic: "s7plc/house/alexaflexmotionsensor1"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  name: "Alexa Flex Motion Sensor 2"
+  state_topic: "s7plc/house/alexaflexmotionsensor2"
+  command_topic: "s7plc/house/alexaflexmotionsensor2"
+  payload_on: "on"
+  payload_off: "off"
+
+

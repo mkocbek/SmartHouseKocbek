@@ -1,0 +1,130 @@
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+# http:
+#   base_url: example.duckdns.org:8123
+
+homeassistant: 
+  whitelist_external_dirs:
+    - /tmp
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+group: !include hass_groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+light: !include_dir_merge_list lights/
+cover: !include hass_covers.yaml
+#customize: !include customize.yaml
+switch: !include hass_switches.yaml
+
+mqtt:
+  broker: 192.168.1.144
+  port: 1883
+  client_id: home-assistant
+  username: hass
+  password: !secret mqtt_password
+
+mikrotik:
+  - host: 192.168.1.253
+    username: admin
+    password: !secret mikrotik_password
+
+camera:
+  - platform: synology
+    url: https://192.168.1.15:5001
+    username: admin
+    password: !secret synology_password
+    timeout: 15
+    verify_ssl: false
+
+media_player:
+  - platform: spotify
+    client_id: a592564031df47a186c4dccac6657724
+    client_secret: !secret spotify_password
+
+notify: 
+  - name: smtp_alarm_milos
+    platform: smtp
+    server: commail.comtron.si
+    port: 587
+    timeout: 15
+    sender: dogodki@tabla.si
+    encryption: none
+    username: dogodki@tabla.si
+    password: !secret commail_smtp_password
+    recipient:
+      - milos.kocbek@gmail.com
+    sender_name: Alarm Kocbek
+
+sensor:
+  - platform: sql
+    db_url: !secret mysql_db_url
+    scan_interval: 10
+    queries:
+      - name: Heatpump power usage
+        query: "select ROUND(consumption,0) as consumption_round from consumption_formated LIMIT 1;"
+        column: 'consumption_round'
+        unit_of_measurement: W
+
+shopping_list:
+
+homekit:
+  name: KocbekHass
+  filter:
+    include_domains:
+      - light
+      - cover
+
+emulated_hue:
+  host_ip: 192.168.1.144
+  listen_port: 8300
+  advertise_ip: 192.168.1.144
+  advertise_port: 80
+  expose_by_default: false
+  exposed_domains:
+    - light
+    - cover
+    - switch
+  entities:
+    light.dnevna_soba_luc:
+      name: Living room light
+      hidden: false
+    light.dnevna_soba_omara_luc:
+      name: Living room 2 light
+      hidden: false
+    light.jedilnica_luc:
+      name: Dining room light
+      hidden: false
+    light.kuhinja_luc:
+      name: Kitchen light
+      hidden: false
+    light.kuhinja_luc_led:
+      name: Kitchen LED light
+      hidden: false
+    light.kuhinja_sank_luc:
+      name: Bar light
+      hidden: false
+    light.spalnica_luc:
+      name: Playroom light
+      hidden: false
+    light.zunaj_luc:
+      name: Outside light
+      hidden: false
+    cover.spalnica_roleta_levo:
+      name: Playroom left shutter
+      hidden: false
+    cover.spalnica_roleta_desno:
+      name: Playroom right shutter
+      hidden: false
+    switch.alexa_flex_motion_sensor_1:
+      name: Sensor 1
+      hidden: false
+    switch.alexa_flex_motion_sensor_2:
+      name: Sensor 2
+      hidden: false

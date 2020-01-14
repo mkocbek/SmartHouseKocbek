@@ -6,6 +6,8 @@
 !*.yaml
 !.gitignore
 !*.md
+
+!*/
 !/lights/**
 
 # Ignore folders.

@@ -1,0 +1,337 @@
+- platform: mqtt
+  unique_id: "KlubskaSobaLuc"
+  name: "Klubska soba Luč"
+  state_topic: "s7plc/house/output/Q13.0"
+  command_topic: "s7plc/house/input/S7_KlubskaSobaWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "KletHodnikLuc"
+  name: "Klet Hodnik Luč"
+  state_topic: "s7plc/house/output/Q13.5"
+  command_topic: "s7plc/house/input/S7_KletHodnikWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "DrvarnicaLuc"
+  name: "Drvarnica Luč"
+  state_topic: "s7plc/house/output/Q13.3"
+  command_topic: "s7plc/house/input/S7_DrvarnicaWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "KurilnicaLuc"
+  name: "Kurilnica Luč"
+  state_topic: "s7plc/house/output/Q13.2"
+  command_topic: "s7plc/house/input/S7_KurilnicaWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "Cirkulacija"
+  name: "Kurilnica Cirkulacija"
+  state_topic: "s7plc/house/output/Q12.0"
+  command_topic: "s7plc/house/input/S7_CirkulacijaWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "KletZunajLuc"
+  name: "Zunaj Luč"
+  state_topic: "s7plc/house/output/Q13.1"
+  command_topic: "s7plc/house/input/S7_KletZunajWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "PodStopnicamiLuc"
+  name: "Pod stopnicami Luč"
+  state_topic: "s7plc/house/output/Q13.4"
+  command_topic: "s7plc/house/input/S7_PodStopnicamiWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "DnevnaLuc"
+  name: "Dnevna soba Luč"
+  state_topic: "s7plc/house/output/Q0.2"
+  command_topic: "s7plc/house/input/S7_DnevnaWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "DnevnaOmaraLuc"
+  name: "Dnevna soba Omara luč"
+  state_topic: "s7plc/house/output/Q0.1"
+  command_topic: "s7plc/house/input/S7_DnevnaOmaraWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "JedilnicaLuc"
+  name: "Jedilnica Luč"
+  state_topic: "s7plc/house/output/Q8.7"
+  command_topic: "s7plc/house/input/S7_JedilnicaWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "KuhinjaLuc"
+  name: "Kuhinja Luč"
+  state_topic: "s7plc/house/output/Q1.0"
+  command_topic: "s7plc/house/input/S7_KuhinjaWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "KuhinjaLucSank"
+  name: "Kuhinja Šank luč"
+  state_topic: "s7plc/house/output/Q0.7"
+  command_topic: "s7plc/house/input/S7_KuhinjaSankWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "KuhinjaLedike"
+  name: "Kuhinja Luč LED"
+  state_topic: "s7plc/house/output/Q12.3"
+  command_topic: "s7plc/house/input/S7_KuhinjaLedikeWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "TerasaLuc"
+  name: "Zunaj Zunaj luč"
+  state_topic: "s7plc/house/output/Q1.1"
+  command_topic: "s7plc/house/input/S7_TerasaWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "VhodVenLuc"
+  name: "Zunaj Vhod luč"
+  state_topic: "s7plc/house/output/Q0.4"
+  command_topic: "s7plc/house/input/S7_VhodVenWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "NadstresekLuc"
+  name: "Zunaj Nadstrešek luč"
+  state_topic: "s7plc/house/output/M25.6"
+  command_topic: "s7plc/house/input/S7_NadstresekWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "NadstresekZadajLuc"
+  name: "Zunaj Nadstrešek zadaj luč"
+  state_topic: "s7plc/house/output/M25.7"
+  command_topic: "s7plc/house/input/S7_NadstresekZadajWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "SpalnicaLuc"
+  name: "Spalnica Luč"
+  state_topic: "s7plc/house/output/Q8.6"
+  command_topic: "s7plc/house/input/S7_SpalnicaWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "GarSobaLuc"
+  name: "Spalnica Omara luč"
+  state_topic: "s7plc/house/output/Q9.2"
+  command_topic: "s7plc/house/input/S7_GarSobaWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "HodnikSpalnicaLuc"
+  name: "Spalnica Hodnik luč"
+  state_topic: "s7plc/house/output/Q9.3"
+  command_topic: "s7plc/house/input/S7_HodnikSpalnicaWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "KopalnicaLuc"
+  name: "Kopalnica Luč"
+  state_topic: "s7plc/house/output/Q0.3"
+  command_topic: "s7plc/house/input/S7_KopalnicaWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "WCLuc"
+  name: "WC Luč"
+  state_topic: "s7plc/house/output/Q0.0"
+  command_topic: "s7plc/house/input/S7_WCWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "HodnikVhodLuc"
+  name: "Hodnik Luč"
+  state_topic: "s7plc/house/output/Q0.5"
+  command_topic: "s7plc/house/input/S7_HodnikVhodWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "StopniceDolLuc"
+  name: "Stopnice Luč"
+  state_topic: "s7plc/house/output/Q0.6"
+  command_topic: "s7plc/house/input/S7_StopniceDolWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "StopniceLedike"
+  name: "Stopnice Luč LED"
+  state_topic: "s7plc/house/output/Q20.2"
+  command_topic: "s7plc/house/input/S7_StopniceLedikeWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "DnevnaNadLuc"
+  name: "Dnevna Dnevna luč"
+  state_topic: "s7plc/house/output/Q9.7"
+  command_topic: "s7plc/house/input/S7_DnevnaNadWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "DnevnaSredNadLuc"
+  name: "Dnevna Sredina luč"
+  state_topic: "s7plc/house/output/Q8.2"
+  command_topic: "s7plc/house/input/S7_DnevnaSredNadWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "DnevnaStopNadLuc"
+  name: "Dnevna Stopnice Luc"
+  state_topic: "s7plc/house/output/Q20.3"
+  command_topic: "s7plc/house/input/S7_DnevnaStopNadWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "KopalnicaNadLuc"
+  name: "Kopalnica1 Luč"
+  state_topic: "s7plc/house/output/Q8.3"
+  command_topic: "s7plc/house/input/S7_KopalnicaNadWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "KopalnicaOglNadLuc"
+  name: "Kopalnica1 Ogledalo luč"
+  state_topic: "s7plc/house/output/Q9.5"
+  command_topic: "s7plc/house/input/S7_KopalnicaOglNadWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "KopalnicaVentilator"
+  name: "Kopalnica1 Ventilator"
+  state_topic: "s7plc/house/output/Q8.5"
+  command_topic: "s7plc/house/input/S7_KopalnicaVentilatorWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "HodnikKopSpalLuc"
+  name: "Kopalnica1 Hodnik"
+  state_topic: "s7plc/house/output/Q9.6"
+  command_topic: "s7plc/house/input/S7_HodnikKopSpalWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "BalkonSpredajLuc"
+  name: "Balkon spredaj Luč"
+  state_topic: "s7plc/house/output/Q8.0"
+  command_topic: "s7plc/house/input/S7_BalkonSpredajWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "BalkonZadajLuc"
+  name: "Balkon zadaj Luč"
+  state_topic: "s7plc/house/output/Q8.1"
+  command_topic: "s7plc/house/input/S7_BlakonZadajWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "SobaMaticLuc"
+  name: "Soba Matic Luč"
+  state_topic: "s7plc/house/output/Q9.1"
+  command_topic: "s7plc/house/input/S7_Soba1Web"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "SpalnicaNadLuc"
+  name: "Spalnica Nadstropje Luč"
+  state_topic: "s7plc/house/output/Q8.4"
+  command_topic: "s7plc/house/input/S7_Soba2Web"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "SobaAnzeLuc"
+  name: "Soba Anze Luč"
+  state_topic: "s7plc/house/output/Q9.4"
+  command_topic: "s7plc/house/input/S7_Soba3Web"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "StopnicePritMansLuc"
+  name: "Stopnice1 Luč"
+  state_topic: "s7plc/house/output/Q9.0"
+  command_topic: "s7plc/house/input/S7_StopnicePritMansWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "OdpriVrata"
+  name: "Vrata Odpri vhodna vrata"
+  state_topic: "s7plc/house/output/Q12.2"
+  command_topic: "s7plc/house/input/S7_VhodnaVrataBuzzerWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "ReleVOmarici"
+  name: "Luci Ponovni zagon routerja"
+  state_topic: "s7plc/house/output/Q12.1"
+  command_topic: "s7plc/house/input/S7_ReleVKomOmariWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "RoleteAutoGorDol"
+  name: "Rolete Nastavitve Rolete Auto Gor Dol"
+  state_topic: "s7plc/house/memory/M18.7"
+  command_topic: "s7plc/house/input/S7_RoleteAutoGorDolWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  unique_id: "DaylightSavingAdjust"
+  name: "Rolete Nastavitve Poletni čas"
+  state_topic: "s7plc/house/memory/M25.5"
+  command_topic: "s7plc/house/input/S7_DaylightSavingAdjustWeb"
+  payload_on: "on"
+  payload_off: "off"
+
+

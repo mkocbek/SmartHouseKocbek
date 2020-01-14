@@ -1,0 +1,27 @@
+- platform: mqtt
+  name: "Kuhinja Ambient"
+  state_topic: "shellies/shelly/kuhinja_ambient/relay/0"
+  command_topic: "shellies/shelly/kuhinja_ambient/relay/0/command"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  name: "Zalivanje vrt"
+  state_topic: "shellies/shelly/nadstresek1/relay/0"
+  command_topic: "shellies/shelly/nadstresek1/relay/0/command"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  name: "Zalivanje nadstresek"
+  state_topic: "shellies/shelly/nadstresek1/relay/0"
+  command_topic: "shellies/shelly/nadstresek1/relay/0/command"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  name: "Filter bazen"
+  state_topic: "shellies/shelly/filter/relay/0"
+  command_topic: "shellies/shelly/filter/relay/0/command"
+  payload_on: "on"
+  payload_off: "off"
